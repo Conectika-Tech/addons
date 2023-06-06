@@ -26,7 +26,7 @@
         'views/partner_view.xml',
     ],
     'images': ['static/description/banner.png'],
-    'license': 'AGPL-3',
+    'license': 'GPL-3',
     'installable': True,
     'application': True,
 }
