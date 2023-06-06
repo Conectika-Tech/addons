@@ -26,7 +26,7 @@
         'views/partner_view.xml',
     ],
     'images': ['static/description/banner.png'],
-    'license': 'GPL-3',
+    'license': 'OEEL-1',
     'installable': True,
     'application': True,
 }
