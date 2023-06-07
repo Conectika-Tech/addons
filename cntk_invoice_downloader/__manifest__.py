@@ -8,8 +8,8 @@
 ###################################################################################
 
 {
-    'name': 'Conectika.tech Enterprise CFDI Downloader',
-    'summary': 'CFDI (XML and PDF) Downloader and SAT PDF validations',
+    'name': 'Community Account Invoice Downloader',
+    'summary': 'Account Invoice Attachments Downloader for Community versions no EDI',
     'version': '16.0.1',
     'author': 'Conectika.tech',
     'website': "https://conectika.tech",
@@ -17,7 +17,7 @@
     'maintainer': 'Conectika.tech',
     'live_test_url': 'https://conectika.tech',
     "category": "Industries",
-    "depends" : ["l10n_mx_edi",],
+    "depends" : ["account",],
     'data': [
         'security/ir.model.access.csv',
         'data/res_partner_data.xml',
@@ -25,7 +25,7 @@
         'views/partner_view.xml',
     ],
     'images': ['static/description/banner.png'],
-    'license': 'OPL-1',
+    'license': 'AGPL-3',
     'installable': True,
     'application': True,
 }
