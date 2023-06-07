@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="cfdi_downloader_wizard_form" model="ir.ui.view">
+        <field name="name">cfdi.downloader.wizard.form</field>
+        <field name="model">cfdi.downloader.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Descarga Masiva">
+                <group string="Cliente">
+                    <field name="partner_id" readonly="1"/>
+                    <field name="tipo" widget="selection" />
+                </group>
+                <group string=" ">
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                </group>
+                <footer>
+                    <button name="get_zip" string="Descargar ZIP" type="object" default_focus="1" class="oe_highlight"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
