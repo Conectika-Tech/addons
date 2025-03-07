@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "0e027ad4-8323-450b-8ad5-ca9da8a6f163",
+		"name": "Conectika API REST",
+		"description": "Conectika POSTMAN for API REST  \nStep1: Autheticate with body example  \nStep2: Allow cookies heders and look for session_id  \nStep3: use it to call services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3020782"
+	},
+	"item": [
+		{
+			"name": "Authenticate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"params\": {\n        \"db\": \"online.db.url\",  \n        \"login\": \"user\",\n        \"password\": \"password\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8069/web/session/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8069",
+					"path": [
+						"web",
+						"session",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Clientes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"params\": \n    { \n        \"name\": \"Nombre cliente\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8069/costumers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8069",
+					"path": [
+						"costumers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Productos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"params\": { \n        \"name\": \"Nombre producto\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8069/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8069",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"params\": \n    {\n        \"user_id\": 2, //user id authenticate session id\n        \"partner_id\": 1487, //customer id\n        \"order_line\": \n        [\n            [\n                0,\n                0,\n                {\n                    \"product_id\": 451,  // product id\n                    \"product_uom_qty\": 1  // qty \n                }\n            ],\n            [\n                0,\n                0,\n                {\n                    \"product_id\": 394, \n                    \"product_uom_qty\": 1\n                }\n            ]\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8069/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8069",
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Orders",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"params\": {\n        \"id\": \"746\",//\n        \"user_id\": \"\", //loegued user \n        \"partener_id\":\"\", // customer id\n        \"name\": \"S00743\",//'test\n        \"from\":\"2025-02-26\",//aaaa-mm-dd\n        \"to\": \"2025-02-26\" //aaaa-mm-dd\n    }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8069/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8069",
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PruebaSA",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8069/pruebasa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8069",
+					"path": [
+						"pruebasa"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
